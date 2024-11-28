@@ -65,6 +65,15 @@ li {
   margin: 0;
 }
 
+ul .user .bio {
+  display: none;
+}
+
+ul .user .location {
+  text-align: left;
+  color: darkslategrey;
+}
+
 /*
   Part 1
 
