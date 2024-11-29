@@ -41,6 +41,9 @@ main {
 
 .box--top-center {
   background-color: #85c1e9;
+  position: absolute;
+  top: 0;
+  left: 42%;
 }
 
 .box--top-right {
