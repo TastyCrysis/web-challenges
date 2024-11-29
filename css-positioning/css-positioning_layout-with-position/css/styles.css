@@ -59,6 +59,7 @@ body {
   padding: 3% 10%;
   scroll-margin-top: 100px;
   border-radius: 2rem;
+  position: relative;
 }
 
 .card__heading {
