@@ -69,6 +69,9 @@ main {
 
 .box--bottom-center {
   background-color: #21618c;
+  position: absolute;
+  bottom: 0;
+  left: 42%;
 }
 
 .box--bottom-right {
