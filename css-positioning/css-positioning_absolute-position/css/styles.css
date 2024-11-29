@@ -76,4 +76,7 @@ main {
 
 .box--bottom-right {
   background-color: #1b4f72;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
