@@ -233,17 +233,41 @@ body {
   color: var(--eggshell-white);
 }
 
-/* ==[ MEDIA QUERIES & BREAKPOINTS ]== */
+@media screen and (min-width: 600px) {
+  .card-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
-/* Now it's your turn! Use media queries to partially overwrite our
-CSS based on conditions such as viewport width, etc. */
+  .card-section > * {
+    flex: 1 1 calc(50% - var(--gap));
+  }
+}
 
-/* Media Query Tablet */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
+@media screen and (min-width: 1200px) {
+  .card-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+  }
 
-/* Media Query Desktop */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
+  /* Erstes Bild nimmt volle Breite */
+  .card-section > *:first-child {
+    flex: 0 0 100%;
+  }
+
+  /* Zweites und drittes Bild nehmen je die Hälfte */
+  .card-section > *:nth-child(2),
+  .card-section > *:nth-child(3) {
+    flex: 0 0 calc(50% - var(--gap) / 2);
+  }
+
+  /* Letztes Bild nimmt wieder volle Breite */
+  .card-section > *:last-child {
+    flex: 0 0 calc(50% - var(--gap) / 2);
+  }
+}
