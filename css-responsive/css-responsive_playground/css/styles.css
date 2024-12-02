@@ -1,12 +1,4 @@
-/* ==[ PLAYGROUND Challenge! ]== */
-
-/* This challenge includes several smaller challenges and allows you to
-play around with the concepts you've learned. Read the instructions 
-carefully. */
-
 :root {
-  /* Color Variables */
-
   --color-nemo: #ff4a11;
   --color-granite: #252629;
   --color-water-10: #f3f5f9;
@@ -106,10 +98,50 @@ h1 {
   height: 100px;
 }
 
-.box--five {
+.box--five-small {
   width: 100%;
 }
 
-.box--five img {
+@media screen and (min-width: 600px) {
+  .box--five-small {
+    display: none;
+  }
+}
+
+.box--five-medium {
+  width: 100%;
+}
+
+@media screen and (max-width: 599px) {
+  .box--five-medium {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .box--five-medium {
+    display: none;
+  }
+}
+
+.box--five-large {
+  width: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+  .box--five-large {
+    display: none;
+  }
+}
+
+.box--five-small img {
+  width: 100%;
+}
+
+.box--five-medium img {
+  width: 100%;
+}
+
+.box--five-large img {
   width: 100%;
 }
