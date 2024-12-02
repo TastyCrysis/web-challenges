@@ -1,0 +1,19 @@
+.box--five {
+  width: 100%;
+}
+
+.box--five img {
+  width: 100%;
+}
+
+@media (min-width: 599px) {
+  img {
+    content: url(../img/cat_medium.jpg);
+  }
+}
+
+@media (min-width: 1199px) {
+  img {
+    content: url(../img/cat_large.jpg);
+  }
+}

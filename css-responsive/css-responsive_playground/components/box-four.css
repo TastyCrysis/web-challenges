@@ -1,0 +1,12 @@
+.box--four {
+  background-color: lightgray;
+
+  width: 100px;
+  height: 100px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .box--four {
+    background-color: var(--color-granite);
+  }
+}
