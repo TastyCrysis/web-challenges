@@ -1,7 +1,7 @@
 :root {
   --color-granite: rgb(37 38 41 / 100%);
-  --color-nemo: #ff4a11;
-  --color-foam: white;
+  --color-nemo: rgb(255 74 17);
+  --color-foam: rgb(255 255 255);
 }
 
 *,
