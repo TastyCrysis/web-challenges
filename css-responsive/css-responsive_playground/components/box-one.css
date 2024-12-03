@@ -1,0 +1,6 @@
+.box--one {
+  background-color: lightblue;
+  font-size: 32px;
+  width: calc(50%-0em);
+  height: 100px;
+}
