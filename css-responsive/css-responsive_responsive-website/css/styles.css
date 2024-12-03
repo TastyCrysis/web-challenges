@@ -233,41 +233,46 @@ body {
   color: var(--eggshell-white);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
   .card-section {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 10px;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px;
+    align-items: start;
+    gap: var(--gap) calc(var(--gap) * 2);
+    /* End of adjustments */
 
-  .card-section > * {
-    flex: 1 1 calc(50% - var(--gap));
+    .product-card,
+    .intro-text {
+      width: 100%;
+    }
   }
 }
 
 @media screen and (min-width: 1200px) {
+  body,
+  .main-header,
+  .navbar {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .card-section {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gap);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  /* Erstes Bild nimmt volle Breite */
-  .card-section > *:first-child {
-    flex: 0 0 100%;
+  .product-card,
+  .intro-text {
+    grid-column: span 2;
   }
 
-  /* Zweites und drittes Bild nehmen je die Hälfte */
-  .card-section > *:nth-child(2),
-  .card-section > *:nth-child(3) {
-    flex: 0 0 calc(50% - var(--gap) / 2);
+  .--forest {
+    grid-column: 1 / 5;
+    height: 400px;
   }
 
-  /* Letztes Bild nimmt wieder volle Breite */
-  .card-section > *:last-child {
-    flex: 0 0 calc(50% - var(--gap) / 2);
+  .--desert {
+    grid-column: 2 / span 2;
   }
 }
