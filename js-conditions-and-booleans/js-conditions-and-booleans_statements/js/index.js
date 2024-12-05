@@ -45,8 +45,7 @@ console.log(statement);
 
 // Part 5: Greeting
 const userName = "Roland";
-const coachName = "Roland";
 
-const greeting = "Hello " + (userName === coachName ? "Coach" : userName) + "!";
+const greeting = "Hello " + (userName === "Roland" ? "Coach" : userName) + "!";
 
 console.log(greeting);
