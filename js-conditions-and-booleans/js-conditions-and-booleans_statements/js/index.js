@@ -11,7 +11,7 @@ if (receivedPassword === SUPER_SECRET_PASSWORD) {
   console.log("Access denied!");
 }
 // Part 2: Even / Odd
-const number = 6;
+const number = 4;
 
 if (number % 2 == 0) {
   console.log("even number");
@@ -21,6 +21,20 @@ if (number % 2 == 0) {
 
 // Part 3: Hotdogs
 const numberOfHotdogs = 42;
+let pricePerHotdog;
+
+if (numberOfHotdogs < 5) {
+  pricePerHotdog = 2;
+} else if (numberOfHotdogs < 100) {
+  pricePerHotdog = 1.5;
+} else if (numberOfHotdogs < 1000000) {
+  pricePerHotdog = 1;
+} else {
+  pricePerHotdog = 0.1;
+}
+
+let totalPrice = numberOfHotdogs * pricePerHotdog;
+console.log(totalPrice);
 
 // Part 4: Daytime
 const currentHour = 12;
