@@ -37,15 +37,16 @@ let totalPrice = numberOfHotdogs * pricePerHotdog;
 console.log(totalPrice);
 
 // Part 4: Daytime
-const currentHour = 12;
+const currentHour = 10;
 
-const statement = "";
+const statement = currentHour < 17 ? "Still need to learn" : "Partytime!!!";
 
 console.log(statement);
 
 // Part 5: Greeting
-const userName = "Archibald";
+const userName = "Roland";
+const coachName = "Roland";
 
-const greeting = "Hello " + "//enter your code here" + "!";
+const greeting = "Hello " + (userName === coachName ? "Coach" : userName) + "!";
 
 console.log(greeting);
