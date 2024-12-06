@@ -9,7 +9,10 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+const title = "The Lord of the Javascript";
+const author = "Mario";
+const rating = 4.2;
+const sales = 120;
 // --^-- write your code here --^--
 
 /*
