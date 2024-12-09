@@ -17,13 +17,5 @@ lowercaseButton.addEventListener("click", () => {
 });
 
 switchButton.addEventListener("click", () => {
-  firstInput.value =
-    firstInput.value === firstInput.value.toUpperCase()
-      ? firstInput.value.toLowerCase()
-      : firstInput.value.toUpperCase();
-
-  secondInput.value =
-    secondInput.value === secondInput.value.toUpperCase()
-      ? secondInput.value.toLowerCase()
-      : secondInput.value.toUpperCase();
+  [firstInput.value, secondInput.value] = [secondInput.value, firstInput.value];
 });
