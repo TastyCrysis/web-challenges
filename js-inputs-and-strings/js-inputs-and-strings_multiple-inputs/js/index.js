@@ -12,20 +12,19 @@ copyButton.addEventListener("click", () => {
 
 // Task 2: Copy and Uppercase
 
-const firstCopyInUppercaseInput = document.querySelector(
+const firstCopyUppercaseInput = document.querySelector(
   "[data-js=first-copy-uppercase-input]"
 );
-const secondCopyInUppercaseInput = document.querySelector(
+const secondCopyUppercaseInput = document.querySelector(
   "[data-js=second-copy-uppercase-input]"
 );
-const copyInUppercaseButton = document.querySelector(
+const copyUppercaseButton = document.querySelector(
   "[data-js=copy-uppercase-button]"
 );
 
 // --v-- Write your code here --v--
-copyInUppercaseButton.addEventListener("click", () => {
-  secondCopyInUppercaseInput.value =
-    firstCopyInUppercaseInput.value.toUpperCase();
+copyUppercaseButton.addEventListener("click", () => {
+  secondCopyUppercaseInput.value = firstCopyUppercaseInput.value.toUpperCase();
 });
 // --^-- End of Task 2 --^--
 
