@@ -1,5 +1,5 @@
-import {Card} from "../components/Card/Card.js";
-import {renderElement} from "./utils.js";
+import { Card } from "../components/Card/Card.js";
+import { renderElement } from "./utils.js";
 
 console.clear();
 
@@ -34,6 +34,8 @@ const EXAMPLE_DATA = {
 };
 
 // Create dom element for a card and append it to the root
+const url = "https://swapi.py4e.com/api/people";
+
 const firstCard = Card(EXAMPLE_DATA);
 renderElement(firstCard);
 
@@ -42,15 +44,10 @@ fetchDataAndRender();
 // --v-- your code below this line --v--
 
 async function fetchDataAndRender() {
-  const url = "https://swapi.py4e.com/api/people";
   const response = await fetch(url);
-  const data = await response.json();
-  Cards(data);
-}
-
-function Cards(data) {
-  data.results.forEach((person) => {
-    const card = Card(person);
-    renderElement(card);
+  const { results } = await response.json();
+  results.forEach((person) => {
+    const cards = Card(person);
+    renderElement(cards);
   });
 }
