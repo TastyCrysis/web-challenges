@@ -1,5 +1,5 @@
-import { Card } from "../components/Card/Card.js";
-import { renderElement } from "./utils.js";
+import {Card} from "../components/Card/Card.js";
+import {renderElement} from "./utils.js";
 
 console.clear();
 
@@ -49,8 +49,8 @@ async function fetchDataAndRender() {
 }
 
 function Cards(data) {
-  data.results.forEach((character) => {
-    const card = Card(character);
+  data.results.forEach((person) => {
+    const card = Card(person);
     renderElement(card);
   });
 }
