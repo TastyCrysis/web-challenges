@@ -7,18 +7,25 @@ const errorElement = document.querySelector("[data-js='error']");
 async function fetchUserData(url) {
   try {
     const response = await fetch(url);
+    const contentType = response.headers.get("content-type");
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch data! Status Code: ${response.status}`);
+    } else if (!contentType.includes("json")) {
+      throw new Error("No valid JSON: " + contentType);
+    }
 
     return await response.json();
   } catch (error) {
-    return { error: error.message };
+    return {error: error.message};
   }
 }
 
 const endpoints = [
-  { name: "User 1", url: "https://reqres.in/api/users/1" },
-  { name: "User 2", url: "https://reqres.in/api/users/2" },
-  { name: "User 99", url: "https://reqres.in/api/users/99" },
-  { name: "Invalid API link", url: "https://reqres.in" },
+  {name: "User 1", url: "https://reqres.in/api/users/1"},
+  {name: "User 2", url: "https://reqres.in/api/users/2"},
+  {name: "User 99", url: "https://reqres.in/api/users/99"},
+  {name: "Invalid API link", url: "https://reqres.in"},
 ];
 
 endpoints.forEach((endpoint) => {
