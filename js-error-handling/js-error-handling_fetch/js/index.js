@@ -11,7 +11,7 @@ async function fetchUserData(url) {
 
     if (!response.ok) {
       throw new Error(`Failed to fetch data! Status Code: ${response.status}`);
-    } else if (!contentType.includes("json")) {
+    } else if (!contentType.includes("application/json")) {
       throw new Error("No valid JSON: " + contentType);
     }
 
