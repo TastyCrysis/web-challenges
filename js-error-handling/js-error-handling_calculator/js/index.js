@@ -23,8 +23,7 @@ form.addEventListener("submit", (event) => {
   const operation = event.target.operation.value;
 
   try {
-    const result = operations[operation](firstNumber, secondNumber);
-    output.innerText = result;
+    output.innerText = operations[operation](firstNumber, secondNumber);
     errorElement.textContent = "";
   } catch (error) {
     output.innerText = "...";
