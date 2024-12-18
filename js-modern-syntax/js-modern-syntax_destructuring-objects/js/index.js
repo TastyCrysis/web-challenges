@@ -12,6 +12,9 @@ const company = {
   location: "Hamburg",
 };
 
+const {course} = company;
+console.log(course);
+
 // Example: export const { value1 } = myObject;
 
 /*
@@ -24,7 +27,10 @@ Use destructuring to extract the following:
       Set a default value of `false` if `isAdmin` is not present.
 */
 
-const user = { name: "John", years: 30 };
+const user = {name: "John", years: 30};
+
+const {name, years: age, isAdmin = false} = user;
+console.log(name, age, isAdmin);
 
 /*
 EXERCISE 3
@@ -38,6 +44,9 @@ const dog = {
   age: 5,
 };
 
+const {name: dogName, breed: dogBreed, age: dogAge} = dog;
+console.log(dogName, dogBreed, dogAge);
+
 /*
 EXERCISE 4
 Extract the `lastName` property from the `person` object as `personLastName`.
@@ -50,6 +59,10 @@ const person = {
   firstName: "Alex",
 };
 
+const {lastName: personLastName, ...moreInformation} = person;
+console.log(personLastName);
+console.log(moreInformation);
+
 /*
 EXERCISE 5
 Refactor the following function to use destructuring assignment for the
@@ -58,18 +71,12 @@ Hint: You may need to rename one property during destructuring.
 */
 
 export function logInfo(city) {
-  const name = city.name;
-  const country = city.country;
-  const numPeople = city.population;
+  const {name, country, population: numPeople} = city;
 
   return `${name} is in ${country} and has ${numPeople} inhabitants in it.`;
 }
 
-<<<<<<< HEAD
 // This is how you call it:
-=======
-// Usage example:
->>>>>>> main
 console.log(
-  logInfo({ name: "Marseille", country: "France", population: 861635 })
+  logInfo({name: "Marseille", country: "France", population: 861635})
 );
