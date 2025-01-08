@@ -1,6 +1,6 @@
 import Counter from "./components/Counter";
 import "./styles.css";
-import {useState} from "react";
+import { useState } from "react";
 
 export default function App() {
   const [people, setPeople] = useState(0);
@@ -10,7 +10,9 @@ export default function App() {
   }
 
   function handleRemovePeople() {
-    setPeople(people - 1);
+    if (people > 0) {
+      setPeople(people - 1);
+    }
   }
 
   return (
