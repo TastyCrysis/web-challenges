@@ -4,6 +4,7 @@ import EntryForm from "./components/EntryForm";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { useState } from "react";
+import { uid } from "uid";
 
 const initialEntries = [
   {
@@ -39,7 +40,10 @@ function App() {
   const [entries, setEntries] = useState(initialEntries);
 
   function handleAddEntry(newEntry) {
-    setEntries([...entries, newEntry]);
+    const date = new Date().toLocaleDateString("en-us", {
+      dateStyle: "medium",
+    });
+    setEntries([{ id: uid(), date, ...newEntry }, ...entries]);
   }
 
   return (
