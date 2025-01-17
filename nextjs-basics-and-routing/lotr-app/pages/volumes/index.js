@@ -11,6 +11,10 @@ export default function Volumes() {
 
   const randomVolume = getRandomElement(volumes);
 
+  function handleRandomVolume() {
+    router.push(`/volumes/${randomVolume.slug}`);
+  }
+
   return (
     <>
       <h1>The Lord of the Rings</h1>
@@ -23,12 +27,7 @@ export default function Volumes() {
         ))}
       </ul>
       <div>
-        <button
-          type="button"
-          onClick={() => {
-            router.push(`/volumes/${randomVolume.slug}`);
-          }}
-        >
+        <button type="button" onClick={handleRandomVolume}>
           Random Volume
         </button>
       </div>
